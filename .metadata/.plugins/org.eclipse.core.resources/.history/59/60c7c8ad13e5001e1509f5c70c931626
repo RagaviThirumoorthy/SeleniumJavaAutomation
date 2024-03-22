@@ -1,0 +1,10 @@
+package javacodes.Arrays;
+
+public class PrintMaxValue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

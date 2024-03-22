@@ -1,0 +1,13 @@
+package javacodes.Inheritance;
+
+public class ChildDemo {
+	
+	String name = "Kavya";
+
+	public static void main(String[] args) {
+		ChildDemo child = new ChildDemo();
+		System.out.println(child.name);
+		
+	}
+
+}

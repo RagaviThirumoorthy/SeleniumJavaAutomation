@@ -1,0 +1,30 @@
+package javacodes;
+
+public class LearnStatic {
+	
+	String name;							//Instance variable(Global variable), Dependent on objects/instances
+	String gender;							//Initialize whenever the object is created
+	static String city;						//Static variable (Class variable), Independent of objects
+	
+	
+	LearnStatic(String name, String gender){		//Local variables
+		this.name = name;
+		this.gender = gender;
+	}
+
+	public static void main(String[] args) {
+		
+		LearnStatic ls = new LearnStatic("Monica","Female");
+		ls.getID();
+		LearnStatic ls1 = new LearnStatic("Navani","Male");
+		ls1.getID();
+		LearnStatic ls2 = new LearnStatic("Ragavi","Female");
+		ls2.getID();
+	}
+	
+	public void getID() {
+		System.out.println(name);
+		System.out.println(city);
+	}
+
+}

@@ -1,0 +1,14 @@
+package javacodes.Inheritance;
+
+public class ParentVehicle {
+	
+	public String color = "Black";
+	
+	public void gear() {
+		System.out.println("Gear code");
+	}
+	
+	public void brakes() {
+		System.out.println("Brakes code");
+	}
+}

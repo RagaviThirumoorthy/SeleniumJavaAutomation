@@ -1,0 +1,30 @@
+package javacodes.Constructors;
+
+public class ConstructorsDemo {
+	
+	public ConstructorsDemo() {									//Explicit constructor
+		System.out.println("Constructor");			
+	}
+	
+	public ConstructorsDemo(int i, int j) {
+		System.out.println(i+j);
+	}
+
+	public ConstructorsDemo(String string) {
+		System.out.println(string);
+	}
+
+	public void getData() {
+		System.out.println("Method");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ConstructorsDemo con = new ConstructorsDemo();
+		ConstructorsDemo con1 = new ConstructorsDemo(2,3);
+		ConstructorsDemo con2 = new ConstructorsDemo("Ragavi");
+		
+	}
+
+}

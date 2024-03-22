@@ -1,0 +1,23 @@
+package javacodes.Collections;
+
+import java.util.HashSet;
+
+public class Hashset {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		HashSet<String> hashSet = new HashSet<String>();
+		hashSet.add("Stefan");
+		hashSet.add("Katerina");
+		hashSet.add("Damon");
+		hashSet.add("Elena");
+		hashSet.add("Elijah");
+		
+		System.out.println(hashSet);                          //Does not guarantee sequential order
+		hashSet.add("Elena");
+		
+		
+	}
+
+}

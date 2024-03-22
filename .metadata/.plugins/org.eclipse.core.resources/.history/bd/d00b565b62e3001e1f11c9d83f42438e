@@ -1,0 +1,52 @@
+package javaExercises;
+
+public class PyramidTriangle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		triangle1();
+		System.out.println("*************************");
+		triangle2();
+		System.out.println("*************************");
+		invertedTriangle();
+	}
+	
+	public static void triangle1() {
+				
+		for(int i=10;i>0;i--) {
+			
+			for(int j=1;j<=i;j++) {
+				System.out.print(j+" ");
+			}
+			System.out.println("");
+		}
+	}
+	
+	public static void triangle2() {
+		int n=1;
+		for(int i=4;i>0;i--) {
+		
+			for(int j=1;j<=i;j++) {
+				System.out.print(n+" ");
+				n++;
+			}
+			System.out.println("");
+		}
+	}
+	
+	public static void invertedTriangle() {
+		int n=1;
+		for(int i=4;i>0;i--) {
+		
+			for(int j=4;j>=i;j++) {
+				System.out.print(n+" ");
+				n++;
+			}
+			System.out.println("");
+		}
+		
+	}
+
+}
+
+

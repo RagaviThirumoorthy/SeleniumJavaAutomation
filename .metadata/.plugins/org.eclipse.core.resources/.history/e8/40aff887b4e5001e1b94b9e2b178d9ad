@@ -1,0 +1,25 @@
+package javacodes.Inheritance;
+
+public class ChildDemo extends ParentDemo {
+	
+	String name = "Kavya";
+	
+		
+	public static void main(String[] args) {
+		ChildDemo child = new ChildDemo();
+		child.getString();
+		child.getMethod();
+	}
+	
+	public void getMethod() {
+		
+		System.out.println("Child class method");
+	}
+	
+	public void getString() {
+		ChildDemo child = new ChildDemo();
+		System.out.println(child.name);      //Local class preference
+		System.out.println(super.name);
+	}
+
+}

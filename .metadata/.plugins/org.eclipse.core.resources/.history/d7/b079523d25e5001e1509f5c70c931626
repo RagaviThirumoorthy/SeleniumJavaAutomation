@@ -1,0 +1,19 @@
+package javacodes.Constructors;
+
+public class ConstructorsDemo {
+	
+	public ConstructorsDemo() {
+		System.out.println("Constructor");
+	}
+	
+	public void getData() {
+		System.out.println("Method");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ConstructorsDemo con = new ConstructorsDemo();
+	}
+
+}

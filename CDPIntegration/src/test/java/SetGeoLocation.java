@@ -1,0 +1,36 @@
+import java.util.HashMap;
+import java.util.Optional;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v120.emulation.Emulation;
+
+public class SetGeoLocation {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		ChromeDriver driver  = new ChromeDriver();
+		DevTools devTools = driver.getDevTools();
+		devTools.createSession();
+		
+		HashMap<String, Object> coordinates = new HashMap<String, Object>();
+		coordinates.put("latitude", 46);
+		coordinates.put("longitude", 2);
+		coordinates.put("accuracy", 1);
+		
+		driver.executeCdpCommand("Emulation.setGeolocationOverride", coordinates);
+		
+//		devTools.send(Emulation.setGeolocationOverride(Optional.of(46), Optional.of(2), Optional.of(1) ));
+		driver.get("http://google.com");
+		driver.findElement(By.name("q")).sendKeys("Netflix",Keys.ENTER);
+		Thread.sleep(2000);
+		driver.findElements(By.cssSelector(".LC20lb")).get(0).click();
+		Thread.sleep(2000);
+		System.out.println(driver.findElement(By.xpath("//h1[@class='default-ltr-cache-jpuyb8 e9eyrqp8']")).getText());
+		
+	}
+
+}

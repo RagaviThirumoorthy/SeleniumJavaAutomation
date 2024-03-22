@@ -1,0 +1,30 @@
+import java.util.Optional;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v120.network.Network;
+import org.openqa.selenium.devtools.v120.network.model.ConnectionType;
+
+public class NetworkSpeed {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ChromeDriver driver = new ChromeDriver();
+		DevTools devTools = driver.getDevTools();
+		devTools.createSession();
+		
+		devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
+		//Emulate network speed
+		devTools.send(Network.emulateNetworkConditions(false, 3000, 1000, 1000, Optional.of(ConnectionType.ETHERNET)));
+		Long startTime = System.currentTimeMillis();
+		driver.get("https://rahulshettyacademy.com/angularAppdemo/");
+		driver.findElement(By.cssSelector("button[routerlink='/library']")).click();
+		Long endTime = System.currentTimeMillis();
+		System.out.println(endTime-startTime);
+		//before emulate speed = 2160
+		//after emulate speed = 
+	}
+
+}

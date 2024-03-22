@@ -1,0 +1,20 @@
+package javacodes;
+
+public class AccessModifiers {
+
+	int a =100;
+	
+	void getValue() {
+		System.out.println("Value");
+	}
+	
+	public static void main(String[] args) {
+		//Access Modifiers
+		//1. default - None mentioned - Access within the same package
+		//2. public - Access anywhere
+		//3. private - Access only within the class
+		//4. protected - Access within the same package and child classes in the other packages
+
+	}
+
+}

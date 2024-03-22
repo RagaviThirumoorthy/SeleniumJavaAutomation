@@ -1,0 +1,5 @@
+package javacodes.Interface;
+
+public interface AsianTrafficRules {
+
+}

@@ -1,0 +1,13 @@
+package javacodes;
+
+public class Access {
+
+	public static void main(String[] args) {
+		
+		AccessModifiers modi = new AccessModifiers();
+		System.out.println(modi.a);
+		modi.getValue1();
+		modi.getValue2();
+	}
+
+}

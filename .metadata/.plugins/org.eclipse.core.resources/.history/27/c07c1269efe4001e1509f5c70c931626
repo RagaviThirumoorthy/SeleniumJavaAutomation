@@ -1,0 +1,5 @@
+package javacodes.Inheritance;
+
+public class ParentVehicle {
+
+}

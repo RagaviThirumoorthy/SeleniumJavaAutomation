@@ -1,0 +1,18 @@
+package javacodes.Inheritance;
+
+public class childVehicle extends ParentVehicle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		childVehicle child = new childVehicle();
+		System.out.println("Vehicle color is "+child.color);
+		child.brakes();
+		child.gear();
+		child.engine();
+	}
+	
+	public void engine() {
+		System.out.println("New engine code");
+	}
+
+}
